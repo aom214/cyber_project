@@ -1,0 +1,433 @@
+/* 🌟 Stable Cybersecurity Background */
+.login-container {
+ background: url("https://i.imgur.com/2PiFY1u.png");
+  min-height: 100vh !important;
+  overflow-y: auto !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 20px 0 !important;
+}
+.spinner-border {
+  width: 1.5rem !important;
+  height: 1.5rem !important;
+  border-width: 0.2em !important;
+  color: #00d4ff !important;
+}
+/* OTP Input Boxes */
+.otp-input-group {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  gap: 12px !important;
+  flex-wrap: wrap !important; /* Ensure responsiveness */
+}
+
+.otp-input {
+  width: 50px !important;
+  height: 50px !important;
+  border-radius: 8px !important;
+  border: 2px solid #415a77 !important;
+  background: linear-gradient(145deg, #0d1b2a, #1b263b) !important;
+  color: #00d4ff !important; /* Cyan text for digits */
+  font-size: 1.4rem !important;
+  font-family: 'Roboto Mono', monospace !important;
+  text-align: center !important;
+  padding: 0 !important;
+  caret-color: #00d4ff !important;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.3), 0 2px 6px rgba(0, 0, 0, 0.2) !important;
+  transition: all 0.3s ease !important;
+}
+
+.otp-input:focus {
+  border-color: #00d4ff !important;
+  box-shadow: 0 0 12px rgba(0, 212, 255, 0.6), inset 0 2px 4px rgba(0, 0, 0, 0.3) !important;
+  transform: scale(1.05) !important; /* Slight scale-up on focus */
+  outline: none !important;
+}
+
+.otp-input:hover:not(:disabled) {
+  border-color: #778da9 !important;
+  box-shadow: 0 0 10px rgba(119, 141, 169, 0.4) !important;
+}
+/* Admin Page Styles */
+.admin-page {
+  padding-top: 80px !important;
+  min-height: 100vh !important;
+  background: url('https://i.imgur.com/2PiFY1u.png') no-repeat center center fixed !important;
+  background-size: cover !important;
+  position: relative !important;
+}
+
+.admin-header {
+  margin-bottom: 50px !important;
+  padding: 20px !important;
+  background: rgba(27, 38, 59, 0.8) !important;
+  border-bottom: 3px solid #00d4ff !important;
+  box-shadow: 0 8px 20px rgba(0, 212, 255, 0.3) !important;
+}
+
+.admin-title {
+  font-family: 'Orbitron', sans-serif !important;
+  color: #00d4ff !important;
+  font-size: 3rem !important;
+  font-weight: bold !important;
+  text-transform: uppercase !important;
+  text-shadow: 0 0 12px rgba(0, 212, 255, 0.7), 0 0 20px rgba(0, 212, 255, 0.5) !important;
+  margin: 0 !important;
+  animation: glowPulse 2s ease-in-out infinite !important;
+}
+
+@keyframes glowPulse {
+  0% {
+    text-shadow: 0 0 12px rgba(0, 212, 255, 0.7), 0 0 20px rgba(0, 212, 255, 0.5);
+  }
+  50% {
+    text-shadow: 0 0 18px rgba(0, 212, 255, 0.9), 0 0 30px rgba(0, 212, 255, 0.7);
+  }
+  100% {
+    text-shadow: 0 0 12px rgba(0, 212, 255, 0.7), 0 0 20px rgba(0, 212, 255, 0.5);
+  }
+}
+
+.stat-title {
+  font-family: 'Orbitron', sans-serif !important;
+  color: #00d4ff !important;
+  font-size: 1.6rem !important;
+  margin-bottom: 15px !important;
+  text-transform: uppercase !important;
+  text-shadow: 0 0 8px rgba(0, 212, 255, 0.5) !important;
+}
+
+.admin-stat-card {
+  background: linear-gradient(145deg, #1b263b, #0d1b2a) !important;
+  border: 2px solid #00d4ff !important;
+  border-radius: 12px !important;
+  box-shadow: 0 8px 20px rgba(0, 212, 255, 0.3) !important;
+  transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+  margin-bottom: 20px !important;
+  animation: fadeIn 0.5s ease-out !important;
+}
+
+.admin-stat-card:hover {
+  transform: translateY(-5px) !important;
+  box-shadow: 0 12px 30px rgba(0, 212, 255, 0.5) !important;
+}
+
+.stat-value {
+  font-family: 'Roboto Mono', monospace !important;
+  color: #e0e1dd !important;
+  font-size: 2.8rem !important;
+  background: #0d1b2a !important;
+  border-radius: 8px !important;
+  padding: 20px !important;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.3) !important;
+}
+
+.chart-container {
+  position: relative !important;
+  height: 400px !important;
+  width: 100% !important;
+  padding: 15px !important;
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+  .admin-title {
+    font-size: 2.5rem !important;
+  }
+  .admin-stat-card {
+    margin-bottom: 15px !important;
+  }
+  .stat-title {
+    font-size: 1.4rem !important;
+  }
+  .stat-value {
+    font-size: 2.3rem !important;
+    padding: 15px !important;
+  }
+  .chart-container {
+    height: 350px !important;
+  }
+}
+
+@media (max-width: 576px) {
+  .admin-page {
+    padding-top: 60px !important;
+  }
+  .admin-title {
+    font-size: 2rem !important;
+  }
+  .admin-header {
+    padding: 15px !important;
+    margin-bottom: 30px !important;
+  }
+  .stat-title {
+    font-size: 1.2rem !important;
+  }
+  .stat-value {
+    font-size: 2rem !important;
+    padding: 10px !important;
+  }
+  .chart-container {
+    height: 300px !important;
+  }
+}
+.otp-input:disabled {
+  opacity: 0.5 !important;
+  cursor: not-allowed !important;
+  color: #778da9 !important;
+}
+/* Required Field Asterisk */
+.required-asterisk {
+  color: #ff4d4d !important; /* Red to indicate mandatory */
+  margin-right: 5px !important;
+  font-size: 1.2rem !important;
+  line-height: 1 !important;
+}
+.otp-input:not(:placeholder-shown) {
+  border-color: #00d4ff !important; /* Highlight when a digit is entered */
+}
+/* 🏆 Login Card */
+.login-card {
+  border-radius: 15px !important;
+  background: rgba(27, 38, 59, 0.95) !important;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4) !important;
+  border: 1px solid rgba(119, 141, 169, 0.2) !important;
+  backdrop-filter: blur(6px) !important;
+  transition: box-shadow 0.3s ease !important;
+  margin: 20px 0 !important;
+  width: 100% !important;
+}
+/* Customize the spinner */
+.spinner-border {
+  width: 1.5rem !important;
+  height: 1.5rem !important;
+  border-width: 0.2em !important;
+  color: #00d4ff !important; /* Match your theme */
+}
+
+/* Ensure the button text aligns nicely with the spinner */
+.login-btn .spinner-border {
+  vertical-align: middle !important;
+}
+.login-card:hover {
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.5) !important;
+}
+
+/* 🎨 Logo Styling */
+.logo {
+  width: 240px !important;
+  filter: drop-shadow(0 3px 8px rgba(119, 141, 169, 0.3)) !important;
+}
+
+/* 🎯 Text Styling */
+.welcome-text {
+  font-family: 'Orbitron', sans-serif !important;
+  font-weight: 600 !important;
+  color: #00d4ff !important;
+  letter-spacing: 1.5px !important;
+  text-transform: uppercase !important;
+  font-size: 1.6rem !important;
+}
+
+.sub-text {
+  font-family: 'Roboto Mono', monospace !important;
+  font-size: 0.85rem !important;
+  color: #778da9 !important;
+  margin-top: 6px !important;
+}
+
+/* 🎨 Error Notification */
+.error-notification {
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  font-family: 'Roboto Mono', monospace !important;
+  font-size: 0.9rem !important;
+  color: #ff4d4d !important;
+  background: rgba(255, 77, 77, 0.15) !important;
+  padding: 10px 15px !important;
+  border-radius: 5px !important;
+  border: 1px solid #ff4d4d !important;
+  width: 100% !important;
+  max-width: 450px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  box-shadow: 0 2px 10px rgba(255, 77, 77, 0.2) !important;
+}
+
+.close-btn {
+  background: none !important;
+  border: none !important;
+  color: #ff4d4d !important;
+  font-size: 1.2rem !important;
+  cursor: pointer !important;
+  padding: 0 !important;
+  margin-left: 10px !important;
+  line-height: 1 !important;
+  transition: color 0.3s ease !important;
+}
+
+.close-btn:hover {
+  color: #ff8080 !important;
+}
+
+/* 🎨 Input Fields */
+.input-group {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: flex-start !important;
+  width: 100% !important;
+  max-width: 450px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  gap: 15px !important;
+}
+
+.stylish-label {
+  font-family: 'Roboto Mono', monospace !important;
+  font-weight: 500 !important;
+  color: #e0e1dd !important;
+  font-size: 0.95rem !important;
+  width: 100px !important;
+  text-align: right !important;
+  text-transform: uppercase !important;
+  line-height: 38px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: flex-end !important;
+}
+
+.custom-input {
+  border-radius: 6px !important;
+  border: 1px solid #415a77 !important;
+  background: #0d1b2a !important;
+  color: #e0e1dd !important;
+  padding: 10px 12px !important;
+  font-size: 1rem !important;
+  flex-grow: 1 !important;
+  min-width: 0 !important;
+  height: 38px !important;
+  box-sizing: border-box !important;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease !important;
+}
+
+.custom-input:focus {
+  border-color: #00d4ff !important;
+  box-shadow: 0 0 8px rgba(0, 212, 255, 0.4) !important;
+  outline: none !important;
+}
+
+.custom-input::placeholder {
+  color: #778da9 !important;
+  font-style: italic !important;
+  font-size: 0.9rem !important;
+}
+
+/* 🎨 File Input */
+.custom-file-input {
+  border-radius: 6px !important;
+  border: 1px solid #415a77 !important;
+  background: #0d1b2a !important;
+  color: #e0e1dd !important;
+  padding: 8px 12px !important;
+  font-size: 0.9rem !important;
+  flex-grow: 1 !important;
+  min-width: 0 !important;
+  height: 38px !important;
+  box-sizing: border-box !important;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease !important;
+}
+
+.custom-file-input:focus {
+  border-color: #00d4ff !important;
+  box-shadow: 0 0 8px rgba(0, 212, 255, 0.4) !important;
+  outline: none !important;
+}
+
+.custom-file-input::-webkit-file-upload-button {
+  background: #415a77 !important;
+  border: none !important;
+  border-radius: 4px !important;
+  color: #e0e1dd !important;
+  padding: 6px 10px !important;
+  font-family: 'Roboto Mono', monospace !important;
+  cursor: pointer !important;
+  transition: background 0.3s ease !important;
+}
+
+.custom-file-input::-webkit-file-upload-button:hover {
+  background: #00d4ff !important;
+}
+
+/* 🎯 Buttons */
+.login-btn {
+  background: linear-gradient(90deg, #00d4ff, #1b263b) !important;
+  border: none !important;
+  border-radius: 25px !important;
+  padding: 12px 20px !important;
+  font-family: 'Orbitron', sans-serif !important;
+  font-weight: 500 !important;
+  font-size: 1rem !important;
+  text-transform: uppercase !important;
+  letter-spacing: 1.2px !important;
+  transition: background 0.3s ease, box-shadow 0.3s ease !important;
+}
+
+.login-btn:hover {
+  background: linear-gradient(90deg, #1b263b, #00d4ff) !important;
+  box-shadow: 0 0 12px rgba(0, 212, 255, 0.5) !important;
+}
+
+.sign-up-btn {
+  border-radius: 25px !important;
+  border: 2px solid #00d4ff !important;
+  color: #00d4ff !important;
+  padding: 10px 25px !important;
+  font-family: 'Orbitron', sans-serif !important;
+  font-weight: 500 !important;
+  font-size: 0.9rem !important;
+  text-transform: uppercase !important;
+  letter-spacing: 1px !important;
+  transition: all 0.3s ease !important;
+}
+
+.sign-up-btn:hover {
+  background: #00d4ff !important;
+  color: #0d1b2a !important;
+  box-shadow: 0 0 12px rgba(0, 212, 255, 0.5) !important;
+}
+
+/* 🎨 Element Spacing Adjustments */
+.signup-text {
+  font-family: 'Roboto Mono', monospace !important;
+  font-size: 0.85rem !important;
+  color: #778da9 !important;
+  margin-bottom: 10px !important;
+}
+
+.text-center {
+  padding: 0 !important;
+}
+
+/* 🎨 Signup Page Specific Spacing */
+.signup-page .welcome-text {
+  margin-bottom: 15px !important; /* Increased spacing below "Cyber Vault Signup" */
+}
+
+.signup-page .sub-text {
+  margin-bottom: 30px !important; /* Increased spacing below "Register to secure your access" */
+}
+
+.signup-page .input-group {
+  margin-bottom: 20px !important; /* Increased spacing between input groups */
+}
+
+.signup-page .stylish-label {
+  margin-right: 20px !important; /* Increased spacing between label and input */
+}
+
+.signup-page .signup-text {
+  margin-bottom: 15px !important; /* Increased spacing below "Already registered?" */
+}
