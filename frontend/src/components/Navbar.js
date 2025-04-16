@@ -6,7 +6,7 @@ import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import Offcanvas from 'react-bootstrap/Offcanvas';
 import './NavbarStyles.css';
-
+import { Link } from 'react-router-dom';
 function OffcanvasExample({ onLogout }) {
   return (
     <>
