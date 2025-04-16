@@ -5,33 +5,42 @@ import cookieParser from "cookie-parser";
 
 const app = express();
 
+// ✅ Show on server start
 console.log("✅ Server is running...");
 
-// ✅ Proper CORS Setup
+// ✅ CORS Configuration for your frontend
 const corsOptions = {
-    // origin: "https://cybersecurityfrontend.onrender.com", // ✅ Allow frontend URL
-    origin:"https://trustshare-a5u3.onrender.com",
-    credentials: true, // ✅ Allow cookies
-    methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
-    allowedHeaders: ["Content-Type", "Authorization"],
+  origin: "https://trustshare-a5u3.onrender.com", // ✅ Exact frontend origin
+  credentials: true, // ✅ Allows cookies to be sent
+  methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+  allowedHeaders: ["Content-Type", "Authorization"],
 };
 
-// ✅ Apply CORS Middleware BEFORE Routes
+// ✅ Apply CORS Middleware
 app.use(cors(corsOptions));
-app.options("*", cors(corsOptions)); // ✅ Handle Preflight Requests
+app.options("*", cors(corsOptions)); // ✅ Handle preflight requests
 
-// ✅ Middleware for JSON, URL Encoding & Cookies
-app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
-app.use(cookieParser());
+// ✅ Debug: Force CORS headers for extra safety (optional)
+app.use((req, res, next) => {
+  res.header("Access-Control-Allow-Origin", "https://trustshare-a5u3.onrender.com");
+  res.header("Access-Control-Allow-Credentials", "true");
+  res.header("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS");
+  res.header("Access-Control-Allow-Headers", "Content-Type, Authorization");
+  next();
+});
 
-// ✅ Define Routes
+// ✅ Core Middleware
+app.use(express.json()); // Parse JSON request bodies
+app.use(express.urlencoded({ extended: true })); // Parse form data
+app.use(cookieParser()); // Parse cookies from requests
+
+// ✅ Route Handling
 app.use("/api/v1", routes);
 
-// ✅ Error Handling Middleware (Optional)
+// ✅ Global Error Handler
 app.use((err, req, res, next) => {
-    console.error("🔥 Server Error:", err);
-    res.status(500).json({ error: "Internal Server Error" });
+  console.error("🔥 Server Error:", err);
+  res.status(500).json({ error: "Internal Server Error" });
 });
 
 export default app;
