@@ -7,7 +7,7 @@ export const loginUser = createAsyncThunk(
   async ({ username, password }, { rejectWithValue }) => {
     try {
       const response = await axios.post(
-        'http://localhost:4000/api/v1/user/login',
+        'https://cybersecurityproject-soi5.onrender.com/api/v1/user/login',
         { username, password },
         { withCredentials: true }
       );
@@ -25,7 +25,7 @@ export const verifyOtp = createAsyncThunk(
   async ({ username, otp }, { rejectWithValue }) => {
     try {
       const response = await axios.post(
-        `http://localhost:4000/api/v1/user/${username}/Verify_Otp`,
+        `https://cybersecurityproject-soi5.onrender.com/api/v1/user/${username}/Verify_Otp`,
         { otp },
         { withCredentials: true }
       );
@@ -47,7 +47,7 @@ export const logoutUser = createAsyncThunk(
   async (_, { rejectWithValue }) => {
     try {
       const response = await axios.post(
-        'http://localhost:4000/api/v1/user/logout',
+        'https://cybersecurityproject-soi5.onrender.com/api/v1/user/logout',
         {},
         { withCredentials: true }
       );

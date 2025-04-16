@@ -10,7 +10,7 @@ console.log("✅ Server is running...");
 // ✅ Proper CORS Setup
 const corsOptions = {
     // origin: "https://cybersecurityfrontend.onrender.com", // ✅ Allow frontend URL
-    origin:"http://localhost:3000",
+    origin:"https://trustshare-a5u3.onrender.com",
     credentials: true, // ✅ Allow cookies
     methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
     allowedHeaders: ["Content-Type", "Authorization"],

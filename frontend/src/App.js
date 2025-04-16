@@ -53,7 +53,7 @@ const App = () => {
     const checkUser = async () => {
       try {
         const response = await axios.post(
-          "http://localhost:4000/api/v1/user/GetUser",
+          "https://cybersecurityproject-soi5.onrender.com/api/v1/user/GetUser",
           {},
           { withCredentials: true }
         );
