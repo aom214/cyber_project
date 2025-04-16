@@ -45,17 +45,17 @@ function OffcanvasExample({ onLogout }) {
                 </Offcanvas.Title>
               </Offcanvas.Header>
               <Offcanvas.Body className="offcanvas-body">
-                <Nav className="justify-content-end flex-grow-1 pe-3 nav-links">
-                  <Nav.Link href="/" className="nav-item">Home</Nav.Link>
-                  <Nav.Link href="/share-file" className="nav-item">Share File</Nav.Link>
-                  <Nav.Link href="/files" className="nav-item">View Received Files</Nav.Link>
-                  <Nav.Link href="/request" className="nav-item">Notifications</Nav.Link>
-                  <Nav.Link href="/add-friends" className="nav-item">Add Friend</Nav.Link>
-                  <Nav.Link href="/EncryptFile" className="nav-item">Encrypt File</Nav.Link>
-                  <Nav.Link href="/DecryptFile" className="nav-item">Decrypt File</Nav.Link>
-                  <Nav.Link href="/profile" className="nav-item">Profile</Nav.Link>
-                  <Nav.Link onClick={onLogout} className="nav-item">Logout</Nav.Link>
-                </Nav>
+                  <Nav className="justify-content-end flex-grow-1 pe-3 nav-links">
+                    <Nav.Link as={Link} to="/" className="nav-item">Home</Nav.Link>
+                    <Nav.Link as={Link} to="/share-file" className="nav-item">Share File</Nav.Link>
+                    <Nav.Link as={Link} to="/files" className="nav-item">View Received Files</Nav.Link>
+                    <Nav.Link as={Link} to="/request" className="nav-item">Notifications</Nav.Link>
+                    <Nav.Link as={Link} to="/add-friends" className="nav-item">Add Friend</Nav.Link>
+                    <Nav.Link as={Link} to="/EncryptFile" className="nav-item">Encrypt File</Nav.Link>
+                    <Nav.Link as={Link} to="/DecryptFile" className="nav-item">Decrypt File</Nav.Link>
+                    <Nav.Link as={Link} to="/profile" className="nav-item">Profile</Nav.Link>
+                    <Nav.Link onClick={onLogout} className="nav-item">Logout</Nav.Link>
+                  </Nav>
                 <Form className="d-flex search-form">
                   <Form.Control
                     type="search"
