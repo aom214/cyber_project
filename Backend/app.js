@@ -11,7 +11,7 @@ const __dirname = path.dirname(__filename);
 
 // ✅ CORS Configuration
 const corsOptions = {
-  origin: "https://trustshare-a5u3.onrender.com",
+  origin: "https://cybersecurityfrontend.onrender.com",
   credentials: true,
   methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
   allowedHeaders: ["Content-Type", "Authorization"],
@@ -19,7 +19,7 @@ const corsOptions = {
 app.use(cors(corsOptions));
 app.options("*", cors(corsOptions));
 app.use((req, res, next) => {
-  res.header("Access-Control-Allow-Origin", "https://trustshare-a5u3.onrender.com");
+  res.header("Access-Control-Allow-Origin", "https://cybersecurityfrontend.onrender.com");
   res.header("Access-Control-Allow-Credentials", "true");
   res.header("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS");
   res.header("Access-Control-Allow-Headers", "Content-Type, Authorization");
