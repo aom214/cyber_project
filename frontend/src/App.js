@@ -143,7 +143,7 @@ const AppRoutes = ({
         element={
           user ? (
             <PrivateRoute>
-              <Admin onLogout={handleLogout} onLoadComplete={stopLoading} />
+              <Home onLogout={handleLogout} onLoadComplete={stopLoading} />
             </PrivateRoute>
           ) : (
             redirectToLogin()
